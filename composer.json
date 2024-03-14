@@ -4,6 +4,7 @@
     "ext-curl": "*",
     "ext-pdo": "*",
     "ext-openssl": "*",
-    "ext-mysqli": "*"
+    "ext-mysqli": "*",
+    "ext-json": "*"
   }
 }

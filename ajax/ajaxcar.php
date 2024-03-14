@@ -87,7 +87,7 @@ if (count($resultCar) > 0) {
                         </span>
 
                         <?php
-                        if ($_SESSION['loggedin'] == true) {
+                        if (isset($_SESSION['loggedin'])) {
                             ?>
                             <a href="booking.php?id=<?= base64_encode($Registration_no); ?>&P=<?= base64_encode($price); ?>&city=<?= base64_encode($City); ?>" class="car__more">
                                 <span>Rent now</span>

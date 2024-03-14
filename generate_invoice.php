@@ -1,7 +1,19 @@
 <?php
 
-include "./databaseConnection.php";
-include('phpqrcode/qrlib.php');
+session_start();
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "quickcarhire1";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+include 'phpqrcode/qrlib.php';
 
 $Bid = base64_decode(strval($_GET['Bid']));
 
@@ -42,7 +54,6 @@ $Brand = $result1['Brand'];
 $charge = $result1['Charge_Cost'];
 
 $city = $result1['City_Id'];
-
 $query2 = "SELECT * FROM customer WHERE Email = ?";
 $stmt2 = $conn->prepare($query2);
 $stmt2->bind_param("s", $Email_id);

@@ -1,9 +1,9 @@
 <?php
 session_start();
-$servername = "bkervzwjsr4vk9ln1dop-mysql.services.clever-cloud.com";
-$username = "uk4aenfo1gspdujt";
-$password = "P5mkIXVclvxUHwlTzxP9";
-$dbname = "bkervzwjsr4vk9ln1dop";
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "quickcarhire1";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
